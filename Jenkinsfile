@@ -2,10 +2,10 @@ pipeline {
   agent any
   stages {
     stage ('Build') {
-      stesp {
+      steps {
         echo 'Running build automation'
-        sh './gradlow build --no-daemon'
-        archiveArtifects artifacts: 'dist/trainSchedule.zip'
+        sh './gradlew build --no-daemon'
+        archiveArtifacts artifacts: 'dist/trainSchedule.zip'
       }
     }
   }
